@@ -17,12 +17,14 @@ module.exports = {
     amd: true,
     node: true,
     jest: true,
+    cy: true,
   },
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:jsx-a11y/recommended',
     'plugin:jest/recommended',
+    'plugin:cypress/recommended',
     'plugin:prettier/recommended',
   ],
   rules: {
