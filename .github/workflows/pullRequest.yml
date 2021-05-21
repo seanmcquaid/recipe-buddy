@@ -15,7 +15,7 @@ jobs:
       - name: Install modules
         uses: borales/actions-yarn@v2.0.0
         with:
-          cmd: install
+          cmd: install --ignore-engines
       - name: Run Unit Tests
         uses: borales/actions-yarn@v2.0.0
         with:
