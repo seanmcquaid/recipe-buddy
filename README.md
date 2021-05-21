@@ -4,11 +4,11 @@ Docs for 3rd Party API : https://spoonacular.com/food-api/docs#Search-Recipes-by
 
 ## Checklist :
 
-1. Linting - Prettier + ESLint
-2. Unit Testing
-3. Integration Testing
-4. Axios
-5. Styled Components
+1. Linting - Prettier + ESLint - done
+2. Unit Testing - setup
+3. Integration Testing - setup
+4. Axios - installed
+5. Styled Components - installed
 6. Redux
 7. React Router
 8. Base Components - Typography, Button, LinkButton, Input, Checkbox, Dropdown, Loading Spinner
