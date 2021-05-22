@@ -17,7 +17,6 @@ module.exports = {
     amd: true,
     node: true,
     jest: true,
-    cy: true,
   },
   extends: [
     'eslint:recommended',
