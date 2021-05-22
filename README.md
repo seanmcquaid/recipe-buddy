@@ -11,7 +11,7 @@ Docs for 3rd Party API : https://spoonacular.com/food-api/docs#Search-Recipes-by
 5. Styled Components - installed
 6. Redux - done
 7. React Router - done
-8. Base Components - Typography, Button, LinkButton, Input, Checkbox, Dropdown, Loading Spinner
+8. Base Components - Typography, Button, LinkButton, Input, Checkbox, Dropdown, Loading Spinner - done
 9. Global Style Reset - done
 10. Layout - done
 11. E2E Testing - Cypress - done
