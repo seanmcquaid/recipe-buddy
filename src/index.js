@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createGlobalStyle } from 'styled-components';
+import axe from '@axe-core/react';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -11,6 +12,10 @@ const GlobalStyle = createGlobalStyle`
       padding: 0;
     }
 `;
+
+if (process.env.NODE_ENV !== 'production') {
+  axe(React, ReactDOM, 1000);
+}
 
 ReactDOM.render(
   <React.StrictMode>

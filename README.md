@@ -21,6 +21,10 @@ Docs for 3rd Party API : https://spoonacular.com/food-api/docs#Search-Recipes-by
 15. Auto Complete with Cypress in VSCode - setup
 16. Test Utils - Mock Router, Mock Services - done
 17. Example Redux unit tests
+18. Constants
+19. Services
+20. React axe - done
+21. .env setup
 
 ## Requirements :
 
