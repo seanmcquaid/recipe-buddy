@@ -1,14 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createGlobalStyle } from 'styled-components';
+import axe from '@axe-core/react';
+
+const GlobalStyle = createGlobalStyle`
+  * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+`;
+
+if (process.env.NODE_ENV !== 'production') {
+  axe(React, ReactDOM, 1000);
+}
 
 ReactDOM.render(
   <React.StrictMode>
+    <GlobalStyle />
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
 
 // If you want to start measuring performance in your app, pass a function
