@@ -19,7 +19,7 @@ Docs for 3rd Party API : https://spoonacular.com/food-api/docs#Search-Recipes-by
 13. Redux Persist - done
 14. GitHub Actions Workflows - done
 15. Auto Complete with Cypress in VSCode - setup
-16. Test Utils - Mock Router, Mock Services
+16. Test Utils - Mock Router, Mock Services - done
 17. Example Redux unit tests
 
 ## Requirements :
