@@ -9,7 +9,7 @@ Docs for 3rd Party API : https://spoonacular.com/food-api/docs#Search-Recipes-by
 3. Integration Testing - setup
 4. Axios - installed
 5. Styled Components - installed
-6. Redux - installed but need to architect
+6. Redux - done
 7. React Router - done
 8. Base Components - Typography, Button, LinkButton, Input, Checkbox, Dropdown, Loading Spinner
 9. Global Style Reset - done

@@ -1,12 +1,20 @@
+import { LOADING } from './actionTypes';
+
 const initialState = {
-  token: null,
+  isLoading: false,
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
+    case LOADING:
+      return {
+        ...state,
+        isLoading: true,
+      };
     default:
       return {
         ...state,
+        ...initialState,
       };
   }
 };
