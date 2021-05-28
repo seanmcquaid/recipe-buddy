@@ -8,7 +8,7 @@ Docs for 3rd Party API : https://spoonacular.com/food-api/docs#Search-Recipes-by
 
 1. Navbar will change links based on auth status
 
-### Home
+### Home - done
 
 1. User can click link for login and register
 
