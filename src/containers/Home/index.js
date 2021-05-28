@@ -1,9 +1,15 @@
 import styled from 'styled-components';
+import { H1, LinkButton } from '../../components';
 
 const Home = () => (
   <PageContainer>
-    <Header></Header>
-    <Main></Main>
+    <Header>
+      <H1>Recipe Buddy</H1>
+    </Header>
+    <Main>
+      <LinkButton to="/login" label="Login" />
+      <LinkButton to="/register" label="Register" />
+    </Main>
   </PageContainer>
 );
 
