@@ -12,7 +12,7 @@ import H3 from './Typography/H3';
 import H4 from './Typography/H4';
 import P from './Typography/P';
 
-export default {
+export {
   Button,
   Checkbox,
   Dropdown,
