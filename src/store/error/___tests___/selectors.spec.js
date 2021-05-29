@@ -1,14 +1,23 @@
-describe('user - selectors', () => {
-  it('userSelector', () => {
+import { errorSelector, errorMessageSelector } from '../../error/selectors';
+
+describe('error - selectors', () => {
+  it('errorSelector', () => {
     const state = {
-      user: {
-        token: null,
+      error: {
         errorMessage: 'Error message',
       },
     };
+
+    expect(errorSelector(state)).toEqual({ errorMessage: 'Error message' });
   });
 
-  it('tokenSelector', () => {});
+  it('errorMessageSelector', () => {
+    const state = {
+      error: {
+        errorMessage: 'Error message',
+      },
+    };
 
-  it('userErrorMessageSelector', () => {});
+    expect(errorMessageSelector(state)).toEqual('Error message');
+  });
 });
