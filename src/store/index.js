@@ -3,6 +3,7 @@ import thunkMiddleware from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import userReducer from './user/reducer';
 import loadingReducer from './loading/reducer';
+import errorReducer from './error/reducer';
 import storage from 'redux-persist/lib/storage';
 import persistReducer from 'redux-persist/es/persistReducer';
 import persistStore from 'redux-persist/es/persistStore';
@@ -10,6 +11,7 @@ import persistStore from 'redux-persist/es/persistStore';
 const rootReducer = combineReducers({
   user: userReducer,
   loading: loadingReducer,
+  error: errorReducer,
 });
 
 const persistConfig = {
