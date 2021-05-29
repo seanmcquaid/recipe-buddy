@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router';
 import styled from 'styled-components';
 import { Button, TextInput } from '../../components';
 import { loginAction } from '../../store/user/actions';
@@ -10,6 +11,7 @@ const LoginForm = () => {
     password: '',
   });
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const onChange = (event) => {
     const { name, value } = event.target;
@@ -21,7 +23,9 @@ const LoginForm = () => {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    dispatch(loginAction(state.username, state.password));
+    dispatch(loginAction(state.username, state.password)).then(() => {
+      history.push('/userHome');
+    });
   };
 
   return (

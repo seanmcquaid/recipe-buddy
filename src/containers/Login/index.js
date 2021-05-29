@@ -11,7 +11,7 @@ const Login = () => {
     <PageContainer>
       <Header>
         <H1>Login</H1>
-        <P>{errorMessage}</P>
+        <P data-testid="errorMessage">{errorMessage}</P>
       </Header>
       <Main>
         <LoginForm />
