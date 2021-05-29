@@ -1,10 +1,11 @@
 import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 import { H1, P } from '../../components';
+import { errorMessageSelector } from '../../store/error/selectors';
 import LoginForm from './LoginForm';
 
 const Login = () => {
-  const errorMessage = useSelector();
+  const errorMessage = useSelector(errorMessageSelector);
   return (
     <PageContainer>
       <Header>
