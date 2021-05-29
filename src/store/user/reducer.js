@@ -1,5 +1,6 @@
 const initialState = {
   token: null,
+  errorMessage: '',
 };
 
 const reducer = (state = initialState, action) => {
