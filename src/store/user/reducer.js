@@ -2,7 +2,6 @@ import { LOGIN_SUCCESS, REGISTER_SUCCESS } from './actionTypes';
 
 const initialState = {
   token: null,
-  errorMessage: '',
 };
 
 const reducer = (state = initialState, action) => {
