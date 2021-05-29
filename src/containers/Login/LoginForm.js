@@ -12,8 +12,7 @@ const LoginForm = () => {
   const dispatch = useDispatch();
 
   const onChange = (event) => {
-    const name = event.target.name;
-    const value = event.target.value;
+    const { name, value } = event.target;
     setState((prevState) => ({
       ...prevState,
       [name]: value,
