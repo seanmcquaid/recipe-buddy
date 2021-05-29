@@ -1,12 +1,15 @@
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
-import { TextInput } from '../../components';
+import { Button, TextInput } from '../../components';
+import { loginAction } from '../../store/user/actions';
 
 const LoginForm = () => {
   const [state, setState] = useState({
     username: '',
     password: '',
   });
+  const dispatch = useDispatch();
 
   const onChange = (event) => {
     const name = event.target.name;
@@ -19,12 +22,24 @@ const LoginForm = () => {
 
   const onSubmit = (event) => {
     event.preventDefault();
+    dispatch(loginAction(state.username, state.password));
   };
 
   return (
     <Form onSubmit={onSubmit}>
-      <TextInput />
-      <TextInput />
+      <TextInput
+        onChange={onChange}
+        value={state.username}
+        name="username"
+        label="Username"
+      />
+      <TextInput
+        onChange={onChange}
+        value={state.password}
+        name="password"
+        label="Password"
+      />
+      <Button type="submit" label="Submit" />
     </Form>
   );
 };
