@@ -1,4 +1,4 @@
-import { LOGIN_ERROR, REGISTER_ERROR } from './actionTypes';
+import { REQUEST_ERROR } from './actionTypes';
 
 const initialState = {
   errorMessage: '',
@@ -6,8 +6,7 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case LOGIN_ERROR:
-    case REGISTER_ERROR:
+    case REQUEST_ERROR:
       return {
         ...state,
         errorMessage: action.payload.errorMessage,

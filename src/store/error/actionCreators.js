@@ -1,11 +1,6 @@
-import { LOGIN_ERROR, REGISTER_ERROR } from './actionTypes';
+import { REQUEST_ERROR } from './actionTypes';
 
-export const loginError = (errorMessage) => ({
-  type: LOGIN_ERROR,
-  payload: { errorMessage },
-});
-
-export const registerError = (errorMessage) => ({
-  type: REGISTER_ERROR,
+export const requestError = (errorMessage) => ({
+  type: REQUEST_ERROR,
   payload: { errorMessage },
 });

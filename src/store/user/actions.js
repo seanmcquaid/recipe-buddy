@@ -1,11 +1,7 @@
 import usersService from '../../services/usersService';
 import { loading } from '../loading/actionCreators';
-import {
-  loginSuccess,
-  loginError,
-  registerSuccess,
-  registerError,
-} from './actionCreators';
+import { loginSuccess, registerSuccess } from './actionCreators';
+import { requestError } from '../error/actionCreators';
 
 export const loginAction = (username, password) => (dispatch) => {
   dispatch(loading());
@@ -17,7 +13,7 @@ export const loginAction = (username, password) => (dispatch) => {
     })
     .catch((err) => {
       console.log(Object.entries(err));
-      dispatch(loginError(err.data.response.errorMessage));
+      dispatch(requestError(err.data.response.errorMessage));
       return Promise.reject();
     });
 };
@@ -32,7 +28,7 @@ export const registerAction = (username, password) => (dispatch) => {
     })
     .catch((err) => {
       console.log(Object.entries(err));
-      dispatch(registerError(err.data.response.errorMessage));
+      dispatch(requestError(err.data.response.errorMessage));
       return Promise.reject();
     });
 };

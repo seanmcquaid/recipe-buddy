@@ -1,14 +1,22 @@
+import { userSelector, tokenSelector } from '../selectors';
+
 describe('user - selectors', () => {
   it('userSelector', () => {
     const state = {
       user: {
-        token: null,
-        errorMessage: 'Error message',
+        token: 'token',
       },
     };
+    expect(userSelector(state)).toEqual({ token: 'token' });
   });
 
-  it('tokenSelector', () => {});
+  it('tokenSelector', () => {
+    const state = {
+      user: {
+        token: 'token',
+      },
+    };
 
-  it('userErrorMessageSelector', () => {});
+    expect(tokenSelector(state)).toEqual('token');
+  });
 });
