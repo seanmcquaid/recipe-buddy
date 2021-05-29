@@ -1,17 +1,16 @@
-import { LOGIN_SUCCESS, REGISTER_SUCCESS } from './actionTypes';
+import { LOGIN_ERROR, REGISTER_ERROR } from './actionTypes';
 
 const initialState = {
-  token: null,
   errorMessage: '',
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case LOGIN_SUCCESS:
-    case REGISTER_SUCCESS:
+    case LOGIN_ERROR:
+    case REGISTER_ERROR:
       return {
         ...state,
-        token: action.payload.token,
+        errorMessage: action.payload.errorMessage,
       };
     default:
       return {
