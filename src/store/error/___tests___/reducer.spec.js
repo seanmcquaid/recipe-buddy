@@ -14,4 +14,16 @@ describe('error - reducer', () => {
       }),
     ).toEqual({ errorMessage: 'Error message' });
   });
+
+  it('Default', () => {
+    const state = {
+      errorMessage: 'Error message',
+    };
+
+    expect(
+      reducer(state, {
+        type: 'DEFAULT',
+      }),
+    ).toEqual({ errorMessage: '' });
+  });
 });
