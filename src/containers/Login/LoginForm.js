@@ -35,12 +35,14 @@ const LoginForm = () => {
         value={state.username}
         name="username"
         label="Username"
+        type="text"
       />
       <TextInput
         onChange={onChange}
         value={state.password}
         name="password"
         label="Password"
+        type="password"
       />
       <Button type="submit" label="Submit" />
     </Form>

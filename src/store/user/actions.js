@@ -9,12 +9,11 @@ export const loginAction = (username, password) => (dispatch) => {
     .login(username, password)
     .then(({ data }) => {
       dispatch(loginSuccess(data.token));
-      return Promise.resolve();
+      return Promise.resolve(data);
     })
     .catch((err) => {
-      console.log(Object.entries(err));
-      dispatch(requestError(err.data.response.errorMessage));
-      return Promise.reject();
+      dispatch(requestError(err.response.data.errorMessage));
+      return Promise.reject(err);
     });
 };
 
@@ -24,11 +23,10 @@ export const registerAction = (username, password) => (dispatch) => {
     .register(username, password)
     .then(({ data }) => {
       dispatch(registerSuccess(data.token));
-      return Promise.resolve();
+      return Promise.resolve(data);
     })
     .catch((err) => {
-      console.log(Object.entries(err));
-      dispatch(requestError(err.data.response.errorMessage));
-      return Promise.reject();
+      dispatch(requestError(err.response.data.errorMessage));
+      return Promise.reject(err);
     });
 };
