@@ -2,19 +2,19 @@ import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 import { H1, P } from '../../components';
 import { errorMessageSelector } from '../../store/error/selectors';
-import LoginForm from './LoginForm';
+import RegisterForm from './RegisterForm';
 
-const Login = () => {
+const Register = () => {
   const errorMessage = useSelector(errorMessageSelector);
 
   return (
     <PageContainer>
       <Header>
-        <H1>Login</H1>
+        <H1>Register</H1>
       </Header>
       <Main>
         <P data-testid="errorMessage">{errorMessage}</P>
-        <LoginForm />
+        <RegisterForm />
       </Main>
     </PageContainer>
   );
@@ -26,4 +26,4 @@ const Header = styled.header``;
 
 const Main = styled.main``;
 
-export default Login;
+export default Register;
