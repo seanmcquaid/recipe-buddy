@@ -1,13 +1,19 @@
+import { useSelector } from 'react-redux';
 import styled from 'styled-components';
-import { H1 } from '../../components';
+import { H1, P } from '../../components';
+import { errorMessageSelector } from '../../store/error/selectors';
 
 const Register = () => {
+  const errorMessage = useSelector(errorMessageSelector);
+
   return (
     <PageContainer>
       <Header>
         <H1>Register</H1>
       </Header>
-      <Main></Main>
+      <Main>
+        <P data-testid="errorMessage">{errorMessage}</P>
+      </Main>
     </PageContainer>
   );
 };
