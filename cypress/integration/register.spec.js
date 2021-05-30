@@ -18,7 +18,15 @@ describe('Register Page', () => {
     cy.url().should('include', '/userHome');
   });
 
-  it("Error message displays when password and confirm password doesn'nt match", () => {
+  it("Error message displays when passwords don't match", () => {
+    cy.get('[data-testid=usernameTextInput]').type('sean');
+    cy.get('[data-testid=passwordTextInput]').type('password');
+    cy.get('[data-testid=confirmPasswordTextInput]').type('password2');
+
+    cy.get('[data-testid=SubmitButton]').should('be.disabled');
+  });
+
+  it("Submit button is displayed when passwords don't match", () => {
     cy.get('[data-testid=usernameTextInput]').type('sean');
     cy.get('[data-testid=passwordTextInput]').type('password');
     cy.get('[data-testid=confirmPasswordTextInput]').type('password2');
