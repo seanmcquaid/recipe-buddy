@@ -1,5 +1,4 @@
-import { useMemo } from 'react';
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router';
 import styled from 'styled-components';
@@ -44,7 +43,7 @@ const RegisterForm = () => {
         type="text"
       />
       {passwordsMatch ? (
-        <PasswordErrorMessage>
+        <PasswordErrorMessage data-testid="passwordErrorMessage">
           Make sure your password and confirm password match!
         </PasswordErrorMessage>
       ) : null}
