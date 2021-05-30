@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router';
@@ -11,6 +12,10 @@ const RegisterForm = () => {
     password: '',
     confirmPassword: '',
   });
+  const passwordsMatch = useMemo(
+    () => state.password !== state.confirmPassword,
+    [state.password, state.confirmPassword],
+  );
   const dispatch = useDispatch();
   const history = useHistory();
 
@@ -38,7 +43,7 @@ const RegisterForm = () => {
         label="Username"
         type="text"
       />
-      {state.password !== state.confirmPassword ? (
+      {passwordsMatch ? (
         <PasswordErrorMessage>
           Make sure your password and confirm password match!
         </PasswordErrorMessage>
@@ -57,11 +62,7 @@ const RegisterForm = () => {
         label="Confirm Password"
         type="confirmPassword"
       />
-      <Button
-        type="submit"
-        label="Submit"
-        disabled={state.password !== state.confirmPassword}
-      />
+      <Button type="submit" label="Submit" disabled={passwordsMatch} />
     </Form>
   );
 };
