@@ -12,19 +12,19 @@ Docs for 3rd Party API : https://spoonacular.com/food-api/docs#Search-Recipes-by
 
 1. User can click link for login and register
 
-### Login
+### Login - done
 
 1. User can login
 2. User will see errors from back end surface in UI
 
-### Register
+### Register - done
 
 1. User can register
 2. User will see errors from back end surface in UI
 3. User must have matching normal password and confirm password
 4. Regex will be used to enforce password restrictions
 
-### User Home
+### User Home - done
 
 1. User can click links for current recipes, search for recipes and visit profile
 
