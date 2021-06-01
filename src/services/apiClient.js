@@ -1,7 +1,8 @@
 import axios from 'axios';
 
-const apiClient = axios.create({
-  baseUrl: process.env.REACT_APP_API_URL,
+const spoontacularApiClient = axios.create({
+  baseUrl: 'https://api.spoonacular.com',
+  params: { apiKey: process.env.REACT_APP_SPOONTACULAR_API_KEY },
 });
 
-export default apiClient;
+export default spoontacularApiClient;
