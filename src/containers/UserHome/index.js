@@ -9,7 +9,7 @@ const UserHome = () => (
     <Main>
       <LinkButton to="/profile" label="Profile" />
       <LinkButton to="/currentRecipes" label="Current Recipes" />
-      <LinkButton to="searchForRecipes" label="Search for Recipes" />
+      <LinkButton to="/searchRecipes" label="Search for Recipes" />
     </Main>
   </PageContainer>
 );
