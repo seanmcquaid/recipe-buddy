@@ -2,6 +2,8 @@
 
 Docs for 3rd Party API : https://spoonacular.com/food-api/docs#Search-Recipes-by-Ingredients
 
+https://spoonacular.com/food-api/docs#Get-Recipe-Ingredients-by-ID
+
 ## Requirements :
 
 ### Layout
@@ -30,7 +32,7 @@ Docs for 3rd Party API : https://spoonacular.com/food-api/docs#Search-Recipes-by
 
 ### Current Recipes
 
-1. User can view current recipes saved and edit/delete each one
+1. User can view current recipes saved and delete each one
 
 ### Search for Recipes
 
@@ -39,12 +41,7 @@ Docs for 3rd Party API : https://spoonacular.com/food-api/docs#Search-Recipes-by
 
 ### View Recipe
 
-1. User can add the recipe to their recipes
-
-### Edit Recipe
-
-1. User can edit the contents on the recipe to their liking
-2. User can save this new recipe
+1. Recipe is displayed on page load
 
 ### Profile
 
