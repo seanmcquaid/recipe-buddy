@@ -1,7 +1,11 @@
 import { useEffect, useReducer } from 'react';
 import spoontacularServices from '../services/spoontacular/spoontacularServices';
 
-const initialState = {};
+const initialState = {
+  isLoading: false,
+  recipes: [],
+  errorMessage: '',
+};
 
 const actionTypes = {
   LOADING: 'LOADING',
@@ -19,7 +23,7 @@ const reducer = (state = initialState, action) => {
     case actionTypes.SUCCESS:
       return {
         ...state,
-        ingredients: action.payload.ingredients,
+        recipes: action.payload.recipes,
         isLoading: false,
       };
     case actionTypes.ERROR:
@@ -41,7 +45,7 @@ const useSearchRecipesByIngredients = (ingredients) => {
     spoontacularServices
       .searchRecipesByIngredients(ingredients)
       .then(({ data }) => {
-        dispatch({ type: actionTypes.SUCCESS, payload: { ingredients: data } });
+        dispatch({ type: actionTypes.SUCCESS, payload: { recipes: data } });
       })
       .catch((err) => {
         console.log(err);

@@ -1,7 +1,11 @@
 import { useEffect, useReducer } from 'react';
 import spoontacularServices from '../services/spoontacular/spoontacularServices';
 
-const initialState = {};
+const initialState = {
+  isLoading: false,
+  recipeInfo: {},
+  errorMessage: '',
+};
 
 const actionTypes = {
   LOADING: 'LOADING',
