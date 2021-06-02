@@ -5,6 +5,8 @@ const spoontacularServices = {
     spoontacularApiClient.get('/recipes/findByIngredients', {
       params: { ingredients, limitLicense: true },
     }),
+  getRecipeById: (id) =>
+    spoontacularApiClient.get(`/recipes/${id}/ingredientWidget.json`),
 };
 
 export default spoontacularServices;
