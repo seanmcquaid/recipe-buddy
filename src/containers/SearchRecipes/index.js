@@ -1,7 +1,10 @@
+import { useState } from 'react';
 import styled from 'styled-components';
 import { H1 } from '../../components';
 
 const SearchRecipes = () => {
+  const [ingredients, setIngredients] = useState([]);
+
   return (
     <PageContainer>
       <Header>
