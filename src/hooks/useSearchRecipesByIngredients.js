@@ -57,7 +57,7 @@ const useSearchRecipesByIngredients = (ingredients) => {
           },
         });
       });
-  }, [ingredients, dispatch]);
+  }, [ingredients]);
 
   return state;
 };
