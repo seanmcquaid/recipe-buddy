@@ -4,9 +4,8 @@ import { LinkButton, LoadingSpinner, P } from '../../components';
 import useSearchRecipesByIngredients from '../../hooks/useSearchRecipesByIngredients';
 
 const Recipes = ({ ingredients }) => {
-  const { isLoading, errorMessage, recipes } = useSearchRecipesByIngredients(
-    ingredients.join(),
-  );
+  const { isLoading, errorMessage, recipes } =
+    useSearchRecipesByIngredients(ingredients);
 
   if (isLoading) {
     return <LoadingSpinner isLoading={isLoading} />;
