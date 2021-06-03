@@ -2,6 +2,7 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import { H1 } from '../../components';
 import AddIngredientsForm from './AddIngredientsForm';
+import Ingredients from './Ingredients';
 import Recipes from './Recipes';
 
 const SearchRecipes = () => {
@@ -13,8 +14,12 @@ const SearchRecipes = () => {
         <H1>Search Recipes</H1>
       </Header>
       <Main>
-        <Recipes ingredients={ingredients} />
         <AddIngredientsForm setIngredients={setIngredients} />
+        <Ingredients
+          ingredients={ingredients}
+          setIngredients={setIngredients}
+        />
+        <Recipes ingredients={ingredients} />
       </Main>
     </PageContainer>
   );
