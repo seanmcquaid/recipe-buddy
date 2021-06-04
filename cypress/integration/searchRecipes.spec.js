@@ -7,6 +7,11 @@ describe('Search Recipe Page', () => {
       { title: 'Parmesan', id: 1 },
     ]);
 
+    cy.intercept(
+      { method: 'GET', url: '*recipes/1*' },
+      { title: 'Parmesan', id: 1 },
+    );
+
     cy.get('[data-testid="View RecipeLinkButton"]').click();
 
     cy.url().should('include', '/recipe');
