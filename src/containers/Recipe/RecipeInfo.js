@@ -1,16 +1,20 @@
 import { useDispatch } from 'react-redux';
-import { useParams } from 'react-router';
+import { useHistory, useParams } from 'react-router';
 import styled from 'styled-components';
 import { Button, H2, LoadingSpinner, P } from '../../components';
 import useGetRecipeById from '../../hooks/useGetRecipeById';
+import { addRecipeAction } from '../../store/savedRecipes/actions';
 
 const RecipeInfo = () => {
   const { id } = useParams();
   const { isLoading, errorMessage, recipeInfo } = useGetRecipeById(id);
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const addRecipeButtonOnClick = () => {
-    dispatch();
+    dispatch(addRecipeAction(id, recipeInfo.title)).then(() => {
+      history.push('/searchRecipes');
+    });
   };
 
   if (isLoading) {
