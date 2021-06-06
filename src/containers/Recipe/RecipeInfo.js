@@ -1,11 +1,17 @@
+import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router';
 import styled from 'styled-components';
-import { H2, LoadingSpinner, P } from '../../components';
+import { Button, H2, LoadingSpinner, P } from '../../components';
 import useGetRecipeById from '../../hooks/useGetRecipeById';
 
 const RecipeInfo = () => {
   const { id } = useParams();
   const { isLoading, errorMessage, recipeInfo } = useGetRecipeById(id);
+  const dispatch = useDispatch();
+
+  const addRecipeButtonOnClick = () => {
+    dispatch();
+  };
 
   if (isLoading) {
     return <LoadingSpinner isLoading={isLoading} />;
@@ -18,6 +24,11 @@ const RecipeInfo = () => {
   return (
     <StyledRecipeInfo>
       <H2>{recipeInfo.title}</H2>
+      <Button
+        onClick={addRecipeButtonOnClick}
+        label="Add Recipe"
+        type="button"
+      />
       <IngredientsList>
         {recipeInfo.ingredients.map((ingredient, i) => (
           <Ingredient key={i}>
