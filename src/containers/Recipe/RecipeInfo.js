@@ -34,11 +34,8 @@ const RecipeInfo = () => {
         type="button"
       />
       <IngredientsList>
-        {recipeInfo.ingredients.map((ingredient, i) => (
-          <Ingredient key={i}>
-            {ingredient.amount.us.value} {ingredient.amount.us.cups}{' '}
-            {ingredient.name}
-          </Ingredient>
+        {recipeInfo.extendedIngredients.map((ingredient, i) => (
+          <Ingredient key={i}>{ingredient.original}</Ingredient>
         ))}
       </IngredientsList>
     </StyledRecipeInfo>
