@@ -10,7 +10,7 @@ const spoontacularServices = {
     ),
   getRecipeById: (id) =>
     spoontacularApiClient.get(
-      `https://api.spoonacular.com/recipes/${id}/ingredientWidget.json`,
+      `https://api.spoonacular.com/recipes/${id}/information`,
     ),
 };
 
