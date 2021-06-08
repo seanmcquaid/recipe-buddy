@@ -2,7 +2,7 @@ import { useEffect, useReducer } from 'react';
 import spoontacularServices from '../services/spoontacular/spoontacularServices';
 
 const initialState = {
-  isLoading: false,
+  isLoading: true,
   recipeInfo: {},
   errorMessage: '',
 };

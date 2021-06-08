@@ -4,6 +4,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import userReducer from './user/reducer';
 import loadingReducer from './loading/reducer';
 import errorReducer from './error/reducer';
+import savedRecipesReducer from './savedRecipes/reducer';
 import storage from 'redux-persist/lib/storage';
 import persistReducer from 'redux-persist/es/persistReducer';
 import persistStore from 'redux-persist/es/persistStore';
@@ -12,6 +13,7 @@ const rootReducer = combineReducers({
   user: userReducer,
   loading: loadingReducer,
   error: errorReducer,
+  savedRecipes: savedRecipesReducer,
 });
 
 const persistConfig = {

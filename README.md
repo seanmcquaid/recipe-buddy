@@ -34,14 +34,15 @@ https://spoonacular.com/food-api/docs#Get-Recipe-Ingredients-by-ID
 
 1. User can view current recipes saved and delete each one
 
-### Search for Recipes
+### Search for Recipes - done
 
 1. User can enter ingredients and search for recipes
 2. User can click a link to view the recipe
 
-### View Recipe
+### View Recipe - done
 
 1. Recipe is displayed on page load
+2. User can add recipe and add custom name
 
 ### Profile
 

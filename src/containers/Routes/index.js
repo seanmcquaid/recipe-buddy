@@ -3,6 +3,7 @@ import Home from '../Home';
 import Login from '../Login';
 import Register from '../Register';
 import SearchRecipes from '../SearchRecipes';
+import Recipe from '../Recipe';
 import UserHome from '../UserHome';
 
 const Routes = () => (
@@ -12,6 +13,7 @@ const Routes = () => (
     <Route exact path="/register" component={Register} />
     <Route exact path="/userHome" component={UserHome} />
     <Route exact path="/searchRecipes" component={SearchRecipes} />
+    <Route exact path="/recipe/:id" component={Recipe} />
   </Switch>
 );
 
