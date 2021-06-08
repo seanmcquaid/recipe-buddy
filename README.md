@@ -42,7 +42,7 @@ https://spoonacular.com/food-api/docs#Get-Recipe-Ingredients-by-ID
 ### View Recipe - done
 
 1. Recipe is displayed on page load
-2. User can add recipe and add custom name
+2. User can add recipe
 
 ### Profile
 
