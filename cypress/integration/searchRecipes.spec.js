@@ -8,7 +8,7 @@ describe('Search Recipe Page', () => {
     ]);
 
     cy.intercept(
-      { method: 'GET', url: '*recipes/1*' },
+      { method: 'GET', url: '*recipes/1/information*' },
       { title: 'Parmesan', id: 1 },
     );
 
