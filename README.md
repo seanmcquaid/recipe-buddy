@@ -9,6 +9,7 @@ https://spoonacular.com/food-api/docs#Get-Recipe-Ingredients-by-ID
 ### Layout
 
 1. Navbar will change links based on auth status
+2. Will show loading spinner when loading in redux
 
 ### Home - done
 
