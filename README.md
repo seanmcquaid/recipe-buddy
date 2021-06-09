@@ -30,7 +30,7 @@ https://spoonacular.com/food-api/docs#Get-Recipe-Ingredients-by-ID
 
 1. User can click links for current recipes, search for recipes and visit profile
 
-### Current Recipes
+### Current Recipes - done
 
 1. User can view current recipes saved and delete each one
 
@@ -43,8 +43,3 @@ https://spoonacular.com/food-api/docs#Get-Recipe-Ingredients-by-ID
 
 1. Recipe is displayed on page load
 2. User can add recipe
-
-### Profile
-
-1. User can change username and password
-2. User will receive any errors from the back end (username already taken or if it's the same password)
