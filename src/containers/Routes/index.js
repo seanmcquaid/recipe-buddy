@@ -5,6 +5,7 @@ import Register from '../Register';
 import SearchRecipes from '../SearchRecipes';
 import Recipe from '../Recipe';
 import UserHome from '../UserHome';
+import Recipes from '../SearchRecipes/Recipes';
 
 const Routes = () => (
   <Switch>
@@ -14,6 +15,7 @@ const Routes = () => (
     <Route exact path="/userHome" component={UserHome} />
     <Route exact path="/searchRecipes" component={SearchRecipes} />
     <Route exact path="/recipe/:id" component={Recipe} />
+    <Route exact path="/recipes" component={Recipes} />
   </Switch>
 );
 

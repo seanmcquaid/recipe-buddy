@@ -2,8 +2,16 @@ import recipesService from '../../../services/recipesService';
 import configureMockStore from '../../../testUtils/configureMockStore';
 import mockServiceSuccess from '../../../testUtils/mockServiceSuccess';
 import { LOADING } from '../../loading/actionTypes';
-import { addRecipeAction } from '../actions';
-import { ADD_RECIPE_SUCCESS } from '../actionTypes';
+import {
+  addRecipeAction,
+  deleteRecipeAction,
+  getRecipesAction,
+} from '../actions';
+import {
+  ADD_RECIPE_SUCCESS,
+  DELETE_RECIPE_SUCCESS,
+  GET_RECIPES_SUCCESS,
+} from '../actionTypes';
 
 describe('savedRecipes - actions', () => {
   it('addRecipeAction', () => {
@@ -26,6 +34,60 @@ describe('savedRecipes - actions', () => {
         { type: LOADING },
         {
           type: ADD_RECIPE_SUCCESS,
+          payload: { recipes: [{ id: 1, title: 'Parmesan' }] },
+        },
+      ];
+      expect(actions).toEqual(result);
+    });
+  });
+
+  it('deleteRecipeAction', () => {
+    const initialState = {
+      user: {
+        token: 'token',
+      },
+      savedRecipes: {
+        recipes: [{ id: 1, title: 'Parmesan' }],
+      },
+    };
+    const store = configureMockStore(initialState);
+    mockServiceSuccess(recipesService, 'deleteRecipeById', {
+      data: { recipes: [] },
+    });
+
+    return store.dispatch(deleteRecipeAction(1)).then(() => {
+      const actions = store.getActions();
+      const result = [
+        { type: LOADING },
+        {
+          type: DELETE_RECIPE_SUCCESS,
+          payload: { recipes: [] },
+        },
+      ];
+      expect(actions).toEqual(result);
+    });
+  });
+
+  it('getRecipesAction', () => {
+    const initialState = {
+      user: {
+        token: 'token',
+      },
+      savedRecipes: {
+        recipes: [],
+      },
+    };
+    const store = configureMockStore(initialState);
+    mockServiceSuccess(recipesService, 'getRecipes', {
+      data: { recipes: [{ id: 1, title: 'Parmesan' }] },
+    });
+
+    return store.dispatch(getRecipesAction()).then(() => {
+      const actions = store.getActions();
+      const result = [
+        { type: LOADING },
+        {
+          type: GET_RECIPES_SUCCESS,
           payload: { recipes: [{ id: 1, title: 'Parmesan' }] },
         },
       ];
