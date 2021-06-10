@@ -6,16 +6,17 @@ import SearchRecipes from '../SearchRecipes';
 import Recipe from '../Recipe';
 import UserHome from '../UserHome';
 import Recipes from '../SearchRecipes/Recipes';
+import ProtectedRoute from './ProtectedRoute';
 
 const Routes = () => (
   <Switch>
     <Route exact path="/" component={Home} />
     <Route exact path="/login" component={Login} />
     <Route exact path="/register" component={Register} />
-    <Route exact path="/userHome" component={UserHome} />
-    <Route exact path="/searchRecipes" component={SearchRecipes} />
-    <Route exact path="/recipe/:id" component={Recipe} />
-    <Route exact path="/recipes" component={Recipes} />
+    <ProtectedRoute exact path="/userHome" component={UserHome} />
+    <ProtectedRoute exact path="/searchRecipes" component={SearchRecipes} />
+    <ProtectedRoute exact path="/recipe/:id" component={Recipe} />
+    <ProtectedRoute exact path="/recipes" component={Recipes} />
   </Switch>
 );
 
